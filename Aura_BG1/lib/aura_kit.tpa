@@ -2,18 +2,8 @@
 //////////////////////////////////// KIT //////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
-PRINT ~Choose a class for Aura:~
+OUTER_SPRINT ~auraclass~ 1
 
-PRINT ~Please choose one of the following:
-[1] Artificer (Thief)
-[2] Illusionist / Artificer (Mage / Thief)
-[3] Priestess / Artificer (Cleric / Thief)~
-
-OUTER_SPRINT ~auraclass~ ~placeholder_value~
-OUTER_WHILE (!(IS_AN_INT ~auraclass~) OR (~auraclass~ > 0x5) OR (~auraclass~ < 0x1)) BEGIN
-  PRINT ~Please select 1, 2, or 3 and press Enter.~
-  ACTION_READLN ~auraclass~
-END
       ACTION_IF ("auraclass" = 1) THEN BEGIN
 ADD_KIT ~C0AURA~
  // appended to CLASWEAP.2da
